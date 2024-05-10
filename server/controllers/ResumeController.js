@@ -51,9 +51,9 @@ const index = async (req, res) => {
   try {
     const pdfText = await extractTextFromPDF(req.file.buffer);
     // const pdf = await extractTextFromPDF("curriculums/Curriculo-VInicius.pdf");
-    const prompt = `usando esses dados: ${pdfText} preencha os eguinte json: ${JSON.stringify(
+    const prompt = `usando esses dados: ${pdfText} preencha o seguinte json: ${JSON.stringify(
       curriculum_example
-    )}`;
+    )} ------------------ Não invente dados, use os dados do currículo, caso um dado não seja encontrado preencha a propriedade com null`;
 
     const chat = model.startChat({
       generationConfig,

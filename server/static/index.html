@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="index.css" />
+    <title>Meu Currículo</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Currículo 79</h1>
+        <h2>análise, insides e vagas</h2>
+      </header>
+      <section id="resume-form">
+        <h2>Envie seu currículo para análise</h2>
+        <form id="form-upload-pdf" method="post" enctype="multipart/form-data">
+          <input type="file" id="pdf_file" name="pdf_file" accept=".pdf" />
+          <button id="select-pdf-button" type="button">Selecione um PDF</button>
+        </form>
+      </section>
+      <section id="resume"></section>
+      <div id="loading">
+        <img src="loading01.png" alt="Loading" />
+        <img src="loading02.png" alt="Loading" />
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
